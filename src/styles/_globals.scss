@@ -1,0 +1,443 @@
+@import "seco.scss/scscss/seco.main.scss";
+@import "_site.mixins.scss";
+
+button,
+input {
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+}
+
+// body.android {
+//     .longPress { display: none; }
+//     .toClick { display: block; }
+// }
+.main-content,
+body,
+html {
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+  color: #fff;
+  // @include size(100%);
+  width: 100%;
+  height: 100%;
+}
+
+/* z-index */
+
+.part {
+  a {
+    z-index: 300;
+  }
+
+  img {
+    z-index: 200;
+  }
+
+  video {
+    z-index: 100;
+  }
+}
+
+//安哥拉过渡效果
+.view-animate {
+  transition-duration: 1s;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  &.ng-enter {
+    opacity: 0;
+    z-index: 1;
+
+    &.ng-enter-active {
+      opacity: 1;
+    }
+  }
+
+  &.ng-leave {
+    opacity: 1;
+
+    &.ng-leave-active {
+      opacity: 0;
+    }
+  }
+}
+
+.main-content {
+  background-image: url("../assets/images/bg1.jpg");
+}
+
+a {
+  font-size: 30px;
+}
+
+.home,
+.loading {
+  @include divPosition(100%);
+}
+
+.test {
+  @include opacity-on();
+  display: none;
+
+  ul {
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  li {
+    width: 49%;
+    float: left;
+    margin: 0 0 0 1%;
+    padding: 0;
+    height: 100px;
+    display: inline;
+    line-height: 100px;
+    color: #fff;
+    font-size: x-large;
+    word-break: break-all;
+    word-wrap: break-word;
+    margin-bottom: 5px;
+  }
+
+  a {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+  }
+
+  a:link {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a:visited {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a:hover {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  a:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.cardp,
+.download,
+.native,
+.orderquery,
+.refund,
+.refundquery {
+  @include divPosition(100%);
+  @include opacity-on();
+}
+
+input {
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  cursor: pointer;
+  line-height: .75;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  width: 100%;
+  margin: 1px 0;
+}
+
+input:nth-of-type(odd) {
+  background-color: #ec971f;
+}
+
+.group1,
+.group2,
+.group3,
+.group4,
+.group5 {
+  @include opacity-on();
+  @include transition(.5s all ease);
+  background-color: currentColor;
+}
+
+#back {
+  background-color: #007AC8;
+}
+
+.cardp > div {
+  @include divPosition(100%);
+
+  &.group2 .upload,
+  .GMass,.group {
+    @include divPosition(100%);
+    @include opacity-on();
+    background-color: black;
+  }
+}
+
+.eValue {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(165, 42, 42)!important;
+  color: #fff;
+}
+
+.specolor {
+  background-color: #B22222;
+}
+
+#showInfo {
+  @include divPosition(100%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 50%;
+  }
+
+  &.on {
+    display: flex;
+    background-color: rgba(0,0,0,.5);
+  }
+}
+
+.home {
+  display: none;
+
+  .loading {
+    @include opacity-on;
+  }
+  // start
+  .box {
+    @include divPosition;
+
+    .topBar {
+      @include divPosition(100%,60px);
+      opacity: 0;
+      z-index: 300;
+      line-height: 60px;
+      text-indent: 15%;
+      background-color: rgb(55, 59, 62);
+
+      &.on {
+        opacity: 1;
+      }
+    }
+
+    .fontPage {
+      @include divPosition;
+      // @include opacity-on;
+      opacity: 0;
+      z-index: 300;
+      // background: url('../assets/images/bg1.jpg');
+      // display: flex;
+      // justify-content: center;
+      .fontBox {
+        @include transition(.5s all ease);
+        position: relative;
+        margin: auto;
+        padding: 5%;
+        top: 15%;
+        width: 80%;
+        height: auto;
+        border-style: solid;
+        border-width: 1px 2px 2px 1px;
+        border-color: #fff;
+        overflow: hidden;
+
+        p {
+          opacity: 0;
+          font-size: 16px;
+          line-height: 1.5;
+
+          &:not(.gap) {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+
+      &.on {
+        opacity: 1;
+
+        p {
+          @for $i from 1 through 7 {
+            &:nth-child(#{$i}) {
+              opacity: 1;
+              @include transform(translate(0,-20%));
+              @include transition(.5s all ease 1s * $i);
+            }
+          }
+        }
+      }
+    }
+
+    .btnBox,
+    .picBox {
+      @include divPosition;
+
+      a {
+        z-index: 300;
+        @include transition(.5s all ease);
+        border: 1px solid goldenrod;
+        color: goldenrod;
+        right: 10px;
+        top: 75%;
+        opacity: 0;
+        position: absolute;
+        pointer-events: none;
+
+        &.on {
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      img {
+        z-index: 200;
+        @include transition(.5s all ease);
+        width: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+
+        &.on {
+          opacity: 1;
+        }
+      }
+    }
+
+    video {
+      z-index: 100;
+      position: absolute;
+      transition: none;
+      width: 100%;
+      display: block;
+
+      html.ios & {
+        top: auto;
+        bottom: 0;
+      }
+
+      html.android & {
+        top: 0;
+        bottom: auto;
+      }
+
+      &.on {
+        top: -60px !important;
+      }
+    }
+
+    .endBtnBox {
+      @include opacity-on;
+      position: relative;
+      top: 70%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 200;
+
+      a {
+        // position: relative;
+        border: 1px solid #fff;
+      }
+    }
+
+    .mask {
+      z-index: 400;
+      @include divPosition;
+      @include opacity-on;
+      background-color: rgba(0, 0, 0, .7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        height: 40px;
+        line-height: 40px;
+      }
+    }
+  }
+  // end
+  .part {
+    @include divPosition;
+    // @include opacity-on;
+    opacity: 0;
+    pointer-events: none;
+
+    > a {
+      border: 1px solid #fff;
+      right: 10px;
+      top: 10px;
+      @include transition(.5s all ease);
+    }
+
+    > a,
+    img {
+      // @include opacity-on;
+      opacity: 0;
+      position: absolute;
+
+      &.on {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    video {
+      position: absolute;
+      transition: none;
+      width: 100%;
+      display: block;
+    }
+
+    &.on {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  // .part1 {
+  // }
+  // .part2 {
+  // }
+  // .part3 {
+  // }
+  // .part4 {
+  // }
+  // .part5 {
+  // }
+  .part6 {
+    div {
+      position: relative;
+      top: 70%;
+      display: flex;
+      justify-content: space-around;
+
+      a {
+        position: relative;
+        border: 1px solid #fff;
+      }
+    }
+  }
+}

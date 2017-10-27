@@ -1,0 +1,78 @@
+# project
+*.mp4
+*.mp3
+*.mov
+frames/
+.project
+.vscode
+
+# webapp
+private.conf
+.tmp/
+coverage/
+dist/
+node_modules/
+jspm_packages/
+bower_components/
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+
+#Visual Studio files
+website.publishproj
+*.[Oo]bj
+*.user
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.[Cc]ache
+*.ilk
+*.log
+*.lib
+*.sbr
+*.opensdf
+*.unsuccessfulbuild
+*.webtestresult
+ipch/
+obj/
+[Bb]in
+[Dd]ebug*/
+[Rr]elease*/
+Ankh.NoLoad
+.vs/
+
+#Tooling
+_ReSharper*/
+*.resharper
+[Tt]est[Rr]esult*
+*.sass-cache
+
+#Subversion files
+.svn
+
+# Office Temp Files
+~$*
+
+#NuGet
+packages/
+
+#ncrunch
+*ncrunch*
+*crunch*.local.xml
+
+# visual studio database projects
+*.dbmdl
+
+#Test files
+*.testsettings

@@ -1,0 +1,332 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Landrover</title>
+    <meta name="description" content="powered by secoinfo technology">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <script src="//cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.5.8/angular.min.js"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.5.8/angular-route.min.js"></script>
+    <script src="//cdn.bootcss.com/angular.js/1.5.8/angular-animate.min.js"></script>
+    <script src="//cdn.bootcss.com/PreloadJS/0.6.0/preloadjs.min.js"></script>
+    <script src="//res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- head:js -->
+    <!-- only importantFile.js will be injected here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/app.css -->
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <!-- endbuild -->
+</head>
+
+
+<body ng-app="app" ng-controller="RootContorller">
+    <div class="main-content view-animate" ng-view></div>
+
+    <div class="home">
+        <div class="loading on"></div>
+
+
+        <div class="box">
+            <div class="topBar">
+                Landrover
+            </div>
+            <div class="fontPage">
+                <div class="fontBox">
+                    <p>公元2017年</p>
+                    <p>神秘外星来客登陆地球</p>
+                    <p>装备了各种超越时代的黑科技</p>
+                    <p class="gap">你将执行</p>
+                    <p class="gap">“DISCOVERY探秘行动”</p>
+                    <p>遥控无人机进行第一类接触</p>
+                    <p>解开外星来客的真相</p>
+                </div>
+            </div>
+            <div class="btnBox">
+                <a class="btn v1">v1-btn</a>
+                <a class="btn v2">v2-btn</a>
+                <a class="btn v3">v3-btn</a>
+                <a class="btn v4">v4-btn</a>
+                <a class="btn v5">v5-btn</a>
+            </div>
+            <div class="picBox">
+                <img src="assets/images/bg1.jpg" alt="">
+                <img src="assets/images/2.jpg" alt="">
+                <img src="assets/images/3.jpg" alt="">
+                <img src="assets/images/4.jpg" alt="">
+                <img src="assets/images/5.jpg" alt="">
+                <img class="endimg" src="assets/images/6.jpg" alt="">
+            </div>
+            <div class="endBtnBox">
+                <a class="left">官网专区</a>
+                <a class="right">预约试驾</a>
+            </div>
+            <video webkit-playsinline playsinline x5-video-player-type="h5" x5-video-player-fullscreen="true" class="videos" src="assets/video7.mp4"></video>
+            <div class="mask">
+                <a>点击继续播放</a>
+            </div>
+        </div>
+
+        <!--<div class="part1 part">
+            <a class="btn v1">v1-btn</a>
+            <img src="assets/images/bg1.jpg" alt="">
+            <video webkit-playsinline 
+                    playsinline 
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="true"
+                    class="video1"
+                    src="assets/video7.mp4"></video>
+        </div>
+        <div class="part2 part">
+            <a class="btn v2">v2-btn</a>
+            <img src="assets/images/2.jpg" alt="">
+            <video webkit-playsinline 
+                    playsinline
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="true"
+                    class="video2"
+                    src="assets/video_3.mp4" ></video>
+        </div>
+        <div class="part3 part">
+            <a class="btn v3">v3-btn</a>
+            <img src="assets/images/3.jpg" alt="">
+            <video webkit-playsinline 
+                    playsinline
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="true"
+                    class="video3"
+                    src="assets/video_4.mp4"></video>
+        </div>
+        <div class="part4 part">
+            <a class="btn v4">v4-btn</a>
+            <img src="assets/images/4.jpg" alt="">
+            <video webkit-playsinline 
+                    playsinline
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="true"
+                    class="video4"
+                    src="assets/video_5.mp4"></video>
+        </div>
+        <div class="part5 part">
+            <a class="btn v5">v5-btn</a>
+            <img src="assets/images/5.jpg" alt="">
+            <video webkit-playsinline 
+                    playsinline
+                    x5-video-player-type="h5"
+                    x5-video-player-fullscreen="true"
+                    class="video5"
+                    src="assets/video_6.mp4"></video>
+        </div>
+        <div class="part6 part">
+            <img class="endimg" src="assets/images/6.jpg" alt="">
+            <div>
+                <a class="left">官网专区</a>
+                <a class="right">预约试驾</a>
+            </div>
+        </div>-->
+    </div>
+    <div class="test" align="center">
+        <!--<ul>
+            <li style="background-color:#FF7F24"><a href="https://lab.secoinfo.net/discovery/dist/example/jsapi.php">JSAPI支付</a></li>
+            <li style="background-color:#698B22"><a href="https://lab.secoinfo.net/discovery/dist/example/micropay.php">刷卡支付</a></li>
+            <li style="background-color:#8B6914"><a href="https://lab.secoinfo.net/discovery/dist/example/native.php">扫码支付</a></li>
+            <li style="background-color:#CDCD00"><a href="https://lab.secoinfo.net/discovery/dist/example/orderquery.php">订单查询</a></li>
+            <li style="background-color:#CD3278"><a href="https://lab.secoinfo.net/discovery/dist/example/refund.php">订单退款</a></li>
+            <li style="background-color:#848484"><a href="https://lab.secoinfo.net/discovery/dist/example/refundquery.php">退款查询</a></li>
+            <li style="background-color:#8EE5EE"><a href="https://lab.secoinfo.net/discovery/dist/example/download.php">下载订单</a></li>
+        </ul>-->
+        <ul>
+            <li parameter="-" style="background-color:#FF7F24"><a>JSAPI支付</a></li>
+            <li parameter="-" style="background-color:#698B22"><a>刷卡支付</a></li>
+            <li parameter="native" style="background-color:#8B6914"><a>扫码支付</a></li>
+            <li parameter="orderquery" style="background-color:#CDCD00"><a>订单查询</a></li>
+            <li parameter="refund" style="background-color:#CD3278"><a>订单退款</a></li>
+            <li parameter="refundquery" style="background-color:#848484"><a>退款查询</a></li>
+            <li parameter="download" style="background-color:#8EE5EE"><a>下载订单</a></li>
+        </ul>
+    </div>
+    <div class="native">
+        <!--<div style="margin-left: 10px;color:#556B2F;font-size:20px;font-weight: bolder;">扫描支付模式一</div><br/>
+        <img alt="模式一扫码支付" src="https://lab.secoinfo.net/discovery/dist/example/qrcode.php?data=<?php echo urlencode($url1);?>" style="width:150px;height:150px;"
+        />-->
+        <div style="margin-left: 10px;color:#556B2F;font-size:20px;font-weight: bolder;">扫描支付模式二</div><br/>
+        <img alt="模式二扫码支付" src="https://lab.secoinfo.net/discovery/dist/example/qrcode.php?data=" style="width:200px;height:200px;"
+        />
+
+    </div>
+    <div class="orderquery">
+        <div style="margin-left:2%;color:#f00">微信订单号和商户订单号选少填一个，微信订单号优先：</div><br/>
+        <div style="margin-left:2%;">微信订单号：</div>
+        <input class="orderNum" type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="transaction_id"
+            class="transaction_id" /><br /><br />
+        <div style="margin-left:2%;">商户订单号：</div>
+        <input class="merchantNum" type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray" name="out_trade_no"
+            class="out_trade_no" /><br /><br />
+        <div align="center">
+            <input type="submit" value="查询" style="width:210px; height:50px; border-radius: 15px;background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;"
+                type="button" class="orderquerybtn btn" />
+        </div>
+    </div>
+    <div class="refund">
+        <div style="margin-left:2%;color:#f00">微信订单号和商户订单号选少填一个，微信订单号优先：</div><br/>
+        <div style="margin-left:2%;">微信订单号：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="transaction_id" class="transaction_id"
+        /><br /><br />
+        <div style="margin-left:2%;">商户订单号：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="out_trade_no" class="out_trade_no"
+        /><br /><br />
+        <div style="margin-left:2%;">订单总金额(分)：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="total_fee" class="total_fee"
+        /><br /><br />
+        <div style="margin-left:2%;">退款金额(分)：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="refund_fee" class="refund_fee"
+        /><br /><br />
+        <div align="center" style="position:absolute;">
+            <input type="submit" value="提交退款" style="width:210px; height:50px; border-radius: 15px;background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;"
+                type="button" class="refundbtn btn" />
+        </div>
+    </div>
+    <div class="refundquery">
+        <div style="margin-left:2%;color:#f00">微信订单号、商户订单号、微信订单号、微信退款单号选填至少一个，微信退款单号优先：</div><br/>
+        <div style="margin-left:2%;">微信订单号：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="transaction_id" class="transaction_id"
+        /><br /><br />
+        <div style="margin-left:2%;">商户订单号：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="out_trade_no" class="out_trade_no"
+        /><br /><br />
+        <div style="margin-left:2%;">商户退款单号：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="out_refund_no" class="out_refund_no"
+        /><br /><br />
+        <div style="margin-left:2%;">微信退款单号：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="refund_id" class="refund_id"
+        /><br /><br />
+        <div align="center" style="position: absolute">
+            <input type="submit" value="查询" style="width:210px; height:50px; border-radius: 15px;background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;  color:white;  font-size:16px;"
+                type="button" class="refundquerybtn btn" />
+        </div>
+    </div>
+    <div class="download">
+        <div style="margin-left:2%;">对账日期：</div><br/>
+        <input type="text" style="width:96%;height:35px;margin-left:2%;background-color:slategray;" name="bill_date" class="bill_data"
+        /><br /><br />
+        <div style="margin-left:2%;">账单类型：</div><br/>
+        <select style="width:96%;height:35px;margin-left:2%;color:#000;" name="bill_type" class="bill_type">
+		  <option value ="ALL">所有订单信息</option>
+		  <option value ="SUCCESS">成功支付的订单</option>
+		  <option value="REFUND">退款订单</option>
+		  <option value="REVOKED">撤销的订单</option>
+		</select><br /><br />
+        <div align="center" style="position: absolute">
+            <input type="submit" value="下载订单" style="width:210px; height:50px; border-radius: 15px;background-color:#FE6714; border:0px #FE6714 solid; cursor: pointer;color:#000; font-size:16px;"
+                type="button" class="downloadbtn btn" />
+        </div>
+    </div>
+    <div class="cardp on">
+        <input type="button" id="group1" value="卡券" sc-on-add=".group1">
+        <input type="button" id="group2" value="群发消息" sc-on-add=".group2">
+        <input type="button" id="group3" value="按钮" sc-on-add=".group3">
+        <input type="button" id="group4" value="客服接口" sc-on-add=".group4">
+        <input type="button" id="group5" value="模板消息" sc-on-add=".group5">
+        <div class="group1">
+            <input type="button" id="batchAddCard" name="batchAddCard" value="添加卡券[batchAddCard]" /><br />
+            <input type="button" id="openCard" name="openCard" value="显示卡券二维码[openCard]" /><br />
+            <input type="button" id="cardCode" name="cardCode" value="查询导入code数目接口[cardCode]" /><br />
+            <input type="button" id="whiteList" name="whiteList" value="设置测试白名单[whiteList]" /><br />
+            <input type="button" id="getInfo" name="getInfo" value="查询卡券详情[getInfo]" /><br />
+            <input type="button" id="batchget" name="batchget" value="批量查询卡券详情[batchget]" /><br />
+            <input type="button" id="update" name="update" value="更改卡券信息接口[update]" /><br />
+            <input type="button" id="modifystock" name="modifystock" value="修改库存接口[modifystock]" /><br />
+            <input type="button" id="cardDelete" name="cardDelete" value="删除卡券接口[cardDelete]" /><br />
+            <input type="button" id="getcardbizuininfo" name="getcardbizuininfo" value="拉取卡券概况数据接口[getcardbizuininfo]" /><br
+            />
+            <input type="button" id="getcardcardinfo" name="getcardcardinfo" value="获取免费券数据接口[getcardcardinfo]" /><br />
+            <input type="button" id="membercardinfo" name="membercardinfo" value="拉取会员卡概况数据接口[membercardinfo]" /><br />
+            <input type="button" id="membercarddetail" name="membercarddetail" value="拉取单张会员卡数据接口[membercarddetail]" /><br
+            />
+            <input type="button" id="back" name="back" value="返回" sc-on-remove=".group1" /><br />
+            <div id="showInfo">
+                <img class="QrImg" src="" alt="">
+            </div>
+        </div>
+        <div class="group2">
+            <input type="button" id="upload" name="upload" value="上传素材" sc-on-add=".upload" /><br />
+            <div class="upload">
+                <input type="button" class="upImg" name="image" value="上传图片【upImg】">
+                <input type="button" class="upVoice" name="voice" value="上传语音【upVoice】">
+                <input type="button" class="upVideo" name="video" value="上传视频【upVideo】">
+                <input type="button" class="upThumb" name="thumb" value="上传缩略图【upThumb】">
+                <input type="button" id="back" name="back" value="返回" sc-on-remove=".upload" /><br />
+            </div>
+            <input type="button" id="uploadnews" name="uploadnews" value="上传图文消息素材[uploadnews]" /><br />
+            <input type="button" id="getMaterialCount" name="getMaterialCount" value="获取素材总数[getMaterialCount]" /><br />
+            <input type="button" id="batchgetMaterial" name="batchgetMaterial" value="获取素材列表[batchgetMaterial]" /><br />
+            <input type="button" id="" name="" value="分组群发接口" sc-on-add=".group" /><br />
+            <div class="group">
+                <input type="button" id="groupCreat" name="groupCreat" value="创建分组[groupCreat]" /><br />
+                <input type="button" id="groupGet" name="groupGet" value="查询所有分组[groupGet]" /><br />
+                <input type="button" id="groupUpdata" name="groupUpdata" value="修改分组名[groupUpdata]" /><br />
+                <input type="button" id="groupGetId" name="groupGetId" value="查询用户所在分组[groupGetId]" /><br />
+                <input type="button" id="groupMember" name="groupMember" value="移动用户分组[groupMember]" /><br />
+                <input type="button" id="groupBatchupdate" name="groupBatchupdate" value="批量移动用户分组接口[groupBatchupdate]" /><br
+                />
+                <input type="button" id="groupDelete" name="groupDelete" value="删除分组[groupDelete]" /><br />
+                <input type="button" id="groupMass" name="groupMass" value="根据分组进行群发[groupMass]" /><br />
+                <input type="button" id="back" name="back" value="返回" sc-on-remove=".group" /><br />
+            </div>
+            <input type="button" id="groupMassOpenId" name="groupMassOpenId" value="根据OpenID列表群发" sc-on-add=".GMass" /><br/>
+            <div class="GMass">
+                <input type="button" class="mpnews" name="mpnews" value="图文消息">
+                <input type="button" class="text" name="text" value="文本消息">
+                <input type="button" class="voice" name="voice" value="语音消息">
+                <input type="button" class="image" name="image" value="图片消息">
+                <input type="button" class="video" name="video" value="视频消息">
+                <input type="button" class="wxcard" name="wxcard" value="卡券消息">
+                <input type="button" id="back" name="back" value="返回" sc-on-remove=".GMass" /><br />
+            </div>
+            <input type="button" id="deleteMass" name="deleteMass" value="删除群发[deleteMass]" /><br />
+            <input type="button" id="massPreview" name="massPreview" value="预览接口[massPreview]" /><br />
+            <input type="button" id="massGet" name="massGet" value="查询群发消息发送状态[massGet]" /><br />
+            <input type="button" id="back" name="back" value="返回" sc-on-remove=".group2" /><br />
+        </div>
+        <div class="group3">
+            <input type="button" id="creatMenu" name="creatMenu" value="添加按钮[creatMenu]" /><br />
+            <input type="button" id="queryMenu" name="queryMenu" value="查询按钮[queryMenu]" /><br />
+            <input type="button" id="deleteMenu" name="deleteMenu" value="删除按钮[deleteMenu]" /><br />
+            <input type="button" id="resText" name="resText" value="回复文本消息[resText]" /><br />
+            <input type="button" id="back" name="back" value="返回" sc-on-remove=".group3" /><br />
+        </div>
+        <div class="group4">
+            <input type="button" id="kfaccountAdd" name="kfaccountAdd" value="添加客服账号[kfaccountAdd]" /><br />
+            <input type="button" id="kfaccountUpdate" name="kfaccountUpdate" value="修改客服帐号[kfaccountUpdate]" /><br />
+            <input type="button" id="kfaccountDel" name="kfaccountDel" value="删除客服帐号[kfaccountDel]" /><br />
+            <input type="button" id="getkfList" name="getkfList" value="获取所有客服账号[getkfList]" /><br />
+            <input type="button" id="customSend" name="customSend" value="客服接口-发消息[customSend]" /><br />
+            <input type="button" id="back" name="back" value="返回" sc-on-remove=".group4" /><br />
+        </div>
+        <div class="group5">
+            <input type="button" id="setIndustry" name="setIndustry" value="设置所属行业[setIndustry]" /><br />
+            <input type="button" id="getIndustry" name="getIndustry" value="获取所属行业[getIndustry]" /><br />
+            <input type="button" id="addTemplate" name="addTemplate" value="获得模板ID[addTemplate]" /><br />
+            <input type="button" id="getAllTemplate" name="getAllTemplate" value="获得模板列表[getAllTemplate]" /><br />
+            <input type="button" id="delTemplate" name="delTemplate" value="删除模板[delTemplate]" /><br />
+            <input type="button" id="send" name="send" value="发送模板消息[send]" /><br />
+            <input type="button" id="back" name="back" value="返回" sc-on-remove=".group5" /><br />
+        </div>
+    </div>
+    <input type="input" class="eValue" name="" value="" placeholder="在这里填入值。。。">
+    <!-- build:js scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+
+</html>

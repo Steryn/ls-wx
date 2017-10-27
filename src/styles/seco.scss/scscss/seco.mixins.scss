@@ -1,0 +1,42 @@
+﻿// Core variables and mixins
+@import "../bpscss/variables";
+@import "../bpscss/mixins";
+
+@mixin transform($transform...) { -webkit-transform: $transform; transform: $transform; }
+@mixin transition-delay($delay) { -webkit-transition-delay: $delay; transition-delay: $delay; }
+@mixin animation($animation...) { -webkit-animation: $animation; animation: $animation; }
+
+@mixin box-center($w,$h: $w) { position: absolute; width: $w; height: $h; top: 50%; left: 50%; margin: (-$h / 2) 0 0 (-$w / 2); }
+@mixin bg-dif($repeat: no-repeat,$position: center center,$size: cover) { background-repeat: $repeat; background-position: $position; background-size: $size; }
+@mixin opacity-on($true: true) {
+    @include transition(.5s all ease);
+    @if $true { opacity: 0; pointer-events: none;
+        &.on { opacity: 1; pointer-events: all; }
+    }
+    @else { opacity: 1;
+        &.on { opacity: 0; pointer-events: none; }
+    }
+}
+@mixin display-on() { display: none;
+    &.on { display: block; }
+}
+
+@mixin closeX($height) { position: relative;
+    &:before, &:after {
+        content: '';
+        background-color: #fff;
+        @include box-center(1px,$height);
+    }
+    &:before {
+        @include transform(rotate(45deg));
+    }
+    &:after {
+        @include transform(rotate(-45deg));
+    }
+}
+
+@mixin divPosition($w: 100%, $h: $w) { position: absolute; left: 0; top: 0; width: $w; height: $h; }
+
+@mixin extendClickArea($range) {
+    &:before { content: ''; position: absolute; top: -$range; left: -$range; bottom: -$range; right: -$range; }
+}
